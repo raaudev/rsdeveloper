@@ -1254,8 +1254,8 @@ button, input, textarea {
 
 @media (max-width: 480px) {
     :root {
-        --h1-size: 1.8rem;
-        --h2-size: 1.4rem;
+        --h1-size: 2.2rem;
+        --h2-size: 1.8rem;
     }
     
     /* Ajuste adicional do espaçamento para dispositivos muito pequenos */
