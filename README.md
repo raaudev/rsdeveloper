@@ -13,12 +13,12 @@ portfolio/
 ├── images/
 │   ├── profile.png
 │   ├── about.jpg
-│   ├── project1.jpg
-│   ├── project2.jpg
-│   ├── project3.jpg
-│   ├── project4.jpg
-│   ├── project5.jpg
-│   └── project6.jpg
+│   ├── project1.png
+│   ├── project2.png
+│   ├── project3.png
+│   ├── project4.png
+│   ├── project5.png
+│   └── project6.png
 └── index.html
 ```
 
