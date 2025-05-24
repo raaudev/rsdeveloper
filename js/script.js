@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Typed.js initialization
         const options = {
-            strings: ['Frontend', 'UI/UX Designer'],
+            strings: ['Front End'],
             typeSpeed: 100,
             backSpeed: 50,
             backDelay: 2000,
