@@ -1316,4 +1316,12 @@ button, input, textarea {
         flex-direction: column;
         gap: var(--spacing-sm);
     }
+
+    .contact-card .icon {
+        width: 40px; /* Reduce size */
+        height: 40px; /* Reduce size */
+        font-size: 1rem; /* Reduce font size */
+        margin-right: var(--spacing-xs); /* Adjust margin */
+        flex-shrink: 0; /* Prevent shrinking */
+    }
 }
