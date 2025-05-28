@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return false;
             } else {
                 console.error(`Falha ao carregar bibliotecas após ${maxAttempts} tentativas.`);
-                alert("Alguns recursos podem não funcionar corretamente. Por favor, recarregue a página.");
+                // alert("Alguns recursos podem não funcionar corretamente. Por favor, recarregue a página."); // Removido para evitar recarregamentos
                 return false;
             }
         }
