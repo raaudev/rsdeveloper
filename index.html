@@ -139,7 +139,7 @@
             <div class="projects-grid">
                 <div class="project-card" data-category="web">
                     <div class="project-img">
-                        <img src="images/project1.png" alt="Landing Page Financeira">
+                        <img src="images/project1.png" alt="Landing Page Financeira" loading="lazy">
                         <div class="overlay">
                             <div class="project-links">
                                 <a href="https://acertesolucoes.com/" class="project-link"><i class="fas fa-link"></i></a>
@@ -159,7 +159,7 @@
                 </div>
                 <div class="project-card" data-category="app">
                     <div class="project-img">
-                        <img src="images/project2.png" alt="Projeto Gta">
+                        <img src="images/project2.png" alt="Projeto Gta" loading="lazy">
                         <div class="overlay">
                             <div class="project-links">
                                 <a href="https://projetogta.vercel.app/" class="project-link"><i class="fas fa-link"></i></a>
@@ -179,7 +179,7 @@
                 </div>
                 <div class="project-card" data-category="ui">
                     <div class="project-img">
-                        <img src="images/project3.png" alt="RR Multimarcas">
+                        <img src="images/project3.png" alt="RR Multimarcas" loading="lazy">
                         <div class="overlay">
                             <div class="project-links">
                                 <a href="https://rrmultimarcas-six.vercel.app/" class="project-link"><i class="fas fa-link"></i></a>
@@ -199,7 +199,7 @@
                 </div>
                 <div class="project-card" data-category="web">
                     <div class="project-img">
-                        <img src="images/project4.png" alt="Rei Navalha">
+                        <img src="images/project4.png" alt="Rei Navalha" loading="lazy">
                         <div class="overlay">
                             <div class="project-links">
                                 <a href="https://reinavalha.vercel.app/" class="project-link"><i class="fas fa-link"></i></a>
@@ -219,7 +219,7 @@
                 </div>
                 <div class="project-card" data-category="app">
                     <div class="project-img">
-                        <img src="images/project5.png" alt="Landing Page Doce MAgia">
+                        <img src="images/project5.png" alt="Landing Page Doce MAgia" loading="lazy">
                         <div class="overlay">
                             <div class="project-links">
                                 <a href="https://sorveteria-kappa.vercel.app/" class="project-link"><i class="fas fa-link"></i></a>
@@ -239,7 +239,7 @@
                 </div>
                 <div class="project-card" data-category="ui">
                     <div class="project-img">
-                        <img src="images/project6.jpg" alt="App Mobile">
+                        <img src="images/project6.jpg" alt="App Mobile" loading="lazy">
                         <div class="overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link"><i class="fas fa-link"></i></a>
@@ -645,52 +645,21 @@
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" async></script>
     
     <!-- 2. Carregue o EmailJS de CDNs alternativos para maior confiabilidade -->
+    <!-- 1. Carregue as bibliotecas externas primeiro (com defer ou async) -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <!-- EmailJS SDK (com inicialização no script.js ou aqui) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
-        // Função para carregar o script com tratamento de erro
-        function loadEmailJS(callback) {
-            const script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
-            
-            script.onload = function() {
-                console.log("EmailJS carregado com sucesso");
-                if (callback) callback(true);
-            };
-            
-            script.onerror = function() {
-                console.error("Erro ao carregar EmailJS do CDN principal");
-                // Tenta CDN alternativo
-                const backupScript = document.createElement('script');
-                backupScript.type = 'text/javascript';
-                backupScript.src = 'https://cdn.emailjs.com/sdk/4.1.0/email.min.js';
-                
-                backupScript.onload = function() {
-                    console.log("EmailJS carregado com sucesso do CDN alternativo");
-                    if (callback) callback(true);
-                };
-                
-                backupScript.onerror = function() {
-                    console.error("Erro ao carregar EmailJS de ambos os CDNs");
-                    if (callback) callback(false);
-                };
-                
-                document.head.appendChild(backupScript);
-            };
-            
-            document.head.appendChild(script);
-        }
-        
-        // Carrega o EmailJS e inicializa após o carregamento
-        loadEmailJS(function(success) {
-            if (success) {
-                // Inicializa o EmailJS
-                emailjs.init("8pkAhrztYbR7vm-y7");
-                console.log("EmailJS inicializado com sucesso");
-            }
-        });
+       // Inicialize o EmailJS aqui com sua Public Key
+       // Substitua 'YOUR_PUBLIC_KEY' pela sua chave pública real do EmailJS
+       (function(){
+          emailjs.init({ publicKey: "8pkAhrztYbR7vm-y7" }); // Use a Public Key correta
+          console.log("EmailJS SDK inicializado.");
+       })();
     </script>
 
-    <!-- 3. Por último, carregue seu script principal -->
-    <script src="js/script.js"></script>
+    <!-- 2. Por último, carregue seu script principal -->
+    <script src="js/script.js" defer></script>
 </body>
 </html>
