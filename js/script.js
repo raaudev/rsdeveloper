@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.offsetHeight;
                 const sectionId = section.getAttribute('id');
-                const correspondingLink = document.querySelector(`.navbar a[href*=\${sectionId}]`);
+                const correspondingLink = document.querySelector(`.navbar a[href*=${sectionId}]`);
 
                 if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                     if (currentActive) {
