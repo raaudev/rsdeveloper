@@ -7,7 +7,7 @@
 /* ===== VARIABLES ===== */
 :root {
     /* Colors */
-    --primary-color: linear-gradient(to right, #40E0D0, #A78BFA);
+    --primary-color: #40E0D0;
     --secondary-color: #f50057;
     --text-color: #333;
     --text-color-light: #666;
