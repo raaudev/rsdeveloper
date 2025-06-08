@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Typed.js initialization (Verificar se Typed está definido antes de usar)
         if (typeof Typed !== 'undefined') {
             const options = {
-                strings: ['Front End'],
+                strings: ['Freelancer', 'Criativo', 'Web'],
                 typeSpeed: 100,
                 backSpeed: 50,
                 backDelay: 2000,
